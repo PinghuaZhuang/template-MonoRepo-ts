@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "packages/@ztrack/*"
+  ],
+  "publishConfig": {
+    "message": "chore(release): publish",
+    "npmClient": "npm"
+  },
+  "useWorkspaces": true,
+  "version": "independent"
+}
