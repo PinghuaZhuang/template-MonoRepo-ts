@@ -1,6 +1,6 @@
 {
   "name": "@nestark/core",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "MonoRepo模式开发插件模板-core.",
   "author": "zhuangpinghua <zphua2016@gmail.com>",
   "homepage": "https://github.com/PinghuaZhuang/template-MonoRepo-ts",

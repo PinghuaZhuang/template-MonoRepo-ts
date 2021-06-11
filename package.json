@@ -1,14 +1,13 @@
 {
   "name": "template-mono-repo-ts",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "MonoRepo模式开发插件模板.",
   "main": "/packages/",
   "scripts": {
     "example:web": "http-server ./packages/@nestark/web-components",
     "example:auth": "http-server ./packages/@nestark/auth",
     "example:request": "http-server ./packages/@nestark/request",
-    "publish": "lerna publish -m \"update: publish\"",
-    "publish:one": "lerna publish --exact --loglevel=warn -m \"update: publish\"-m \"update: publish\"",
+    "publish": "lerna publish --tag-version-prefix='ztarck_v'",
     "lint": "npm run eslint",
     "eslint": "eslint --cache --ext .jsx,.js,.ts,.tsx packages",
     "stylelint": "stylelint ./**/*.scss",

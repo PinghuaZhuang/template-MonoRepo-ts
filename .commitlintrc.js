@@ -4,6 +4,7 @@ module.exports = {
   ],
   rules: {
     'type-enum': [2, 'always', [
+      'chore(release)',
       'update', // 更新
       'feat', // 添加新功能
       'revert', // 重置
