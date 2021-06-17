@@ -2,32 +2,28 @@
   "name": "@nestark/core",
   "version": "0.0.0",
   "description": "MonoRepo模式开发插件模板-core.",
-  "author": "zhuangpinghua <zphua2016@gmail.com>",
+  "keywords": [
+    "ztrack"
+  ],
   "homepage": "https://github.com/PinghuaZhuang/template-MonoRepo-ts",
   "bugs": {
     "url": "https://github.com/PinghuaZhuang/template-MonoRepo-ts/issues"
-  },
-  "license": "ISC",
-  "main": "lib/index",
-  "esnext": "lib/index.esm",
-  "jsnext": "lib/index.aio.js",
-  "directories": {},
-  "files": [
-    "lib",
-    "typings",
-    "*.d.ts",
-    "README.md"
-  ],
-  "typings": "typings/index.d.ts",
-  "publishConfig": {
-    "registry": "https://registry.npm.taobao.org/"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:PinghuaZhuang/template-MonoRepo-ts.git"
   },
-  "keywords": [
-    "ztrack"
+  "license": "ISC",
+  "author": "zhuangpinghua <zphua2016@gmail.com>",
+  "main": "lib/index",
+  "typings": "typings/index.d.ts",
+  "directories": {},
+  "files": [
+    "lib",
+    "typings",
+    "*.d.ts",
+    "README.md",
+    "index.js"
   ],
   "scripts": {
     "example": "http-server ./",
@@ -40,8 +36,7 @@
     "sort": "sort-package-json package.json",
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
@@ -65,5 +60,10 @@
     "ts-node": "7.0.1",
     "tslib": "1.9.3",
     "typescript": "3.3.3333"
-  }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org/"
+  },
+  "esnext": "lib/index.esm",
+  "jsnext": "lib/index.aio.js"
 }

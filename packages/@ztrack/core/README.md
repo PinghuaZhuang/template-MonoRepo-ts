@@ -1,0 +1,3 @@
+# @zstark/core
+
+my lib
