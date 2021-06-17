@@ -1,8 +1,27 @@
 {
   "name": "template-mono-repo-ts",
   "version": "0.0.0",
+  "private": true,
   "description": "MonoRepo模式开发插件模板.",
+  "keywords": [
+    "template",
+    "mono-repo",
+    "typescript"
+  ],
+  "homepage": "https://github.com/PinghuaZhuang/template-MonoRepo-ts",
+  "bugs": {
+    "url": "https://github.com/PinghuaZhuang/template-MonoRepo-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.miguan.com/frontend/nestark.git"
+  },
+  "license": "MIT",
+  "author": "zphua2016@gmail.com",
   "main": "/packages/",
+  "workspaces": [
+    "packages/@ztrack/*"
+  ],
   "scripts": {
     "example:web": "http-server ./packages/@nestark/web-components",
     "example:auth": "http-server ./packages/@nestark/auth",
@@ -11,6 +30,8 @@
     "lint": "npm run eslint",
     "eslint": "eslint --cache --ext .jsx,.js,.ts,.tsx packages",
     "stylelint": "stylelint ./**/*.scss",
+    "build": "yarn workspaces run build",
+    "sort": "sort-package-json package.json",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "husky": {
@@ -19,9 +40,8 @@
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "http://gitlab.miguan.com/frontend/nestark.git"
+  "dependencies": {
+    "sort-package-json": "^1.50.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -29,6 +49,7 @@
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "@zstark/eslint-plugin-zstark": "^0.0.3",
     "babel-eslint": "^10.1.0",
     "cache-loader": "^4.1.0",
     "conventional-changelog-cli": "^2.1.0",
@@ -43,22 +64,6 @@
     "stylelint": "^13.1.0",
     "typescript": "~4.1.5"
   },
-  "private": true,
-  "workspaces": [
-    "packages/@ztrack/*"
-  ],
-  "useWorkspaces": true,
   "npmClient": "yarn",
-  "keywords": [
-    "template",
-    "mono-repo",
-    "typescript"
-  ],
-  "author": "zphua2016@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PinghuaZhuang/template-MonoRepo-ts/issues"
-  },
-  "homepage": "https://github.com/PinghuaZhuang/template-MonoRepo-ts",
-  "dependencies": {}
+  "useWorkspaces": true
 }
